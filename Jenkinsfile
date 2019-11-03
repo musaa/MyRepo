@@ -3,9 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                def mvnHome = tool name:'maven-3.6.1', type:'maven'
-                def mvnCMD = "${mvnHome}/bin/mvn"
-                sh "${mvnCMD} --version"
+                sh 'mvn --version'
             }
         }
     }
